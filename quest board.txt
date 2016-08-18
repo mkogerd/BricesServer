@@ -1,0 +1,25 @@
+Quest Board:
+
+The Player Request Board process begins by the player taking a note and quill from the chest and writing down their request details in the book. Be sure to include the location of the request and as many details as the Player accepting the request needs. Return the filled-out book to the chest and an official notice will go up on the board for anyone to accept. After a request is completed it will be removed from the board.
+
+/give @p written_book 1 0 {pages:["[\"\",{\"text\":\"The Player Request Board process begins by the player taking a note and quill from the chest and writing down their request details in the book. Be sure to include the location of the request and as many details as the Player accepting the request needs.\"}]","[\"\",{\"text\":\"Return the filled-out book to the chest and an official notice will go up on the board for anyone to accept. After a request is completed it will be removed from the board.\"}]"],title:Request Board Rules,author:Unosami}
+
+
+/give @a[score_questjournal=1,score_questjournal_min=1] minecraft:written_book 1 0 {title:"Conquer the Pantheon!",author:"Seuz",pages:["{text:\"\",extra:[{text:\"Quest Details:\n\",underlined:true},{color:reset,text:\"Location: x:203, z:-672\n\"},{text:\"Difficulty Level: 9\n\"},{text:\"Description:\n\"},{text:\"Aquire a Favor of the Gods and enter the Parthenon. Overcome all of it's challenges!\"}]}","{text:\"\",extra:[{text:\"Rewards:\n\",underlined:true},{color:reset,text:\"You'll discover your rewards as you go.\"}]}"]}
+
+
+/give @a[score_questjournal=1,score_questjournal_min=1] minecraft:written_book 1 0 {title:"Ascend the Challenge Tower!",author:"Arse",pages:["{text:\"\",extra:[{text:\"Quest Details:\n\",underlined:true},{color:reset,text:\"Location: x:-4, z:-829\n\"},{text:\"Difficulty Level: 4\n\"},{text:\"Description:\n\"},{text:\"Ascend to the top of the tower west of town.Excellent platforming skills will be required. Be sure to set your spawn point at the base camp.\"}]}","{text:\"\",extra:[{text:\"Rewards:\n\",underlined:true},{color:reset,text:\"The contents of a chest at the top of the tower.\"}]}"]}
+
+Ascend the challenge tower!:
+Location: x:-4 z:-829
+Difficulty Level: 4
+Description:
+Ascend to the top of the tower west of town.Excellent platforming skills will be required. Be sure to set your spawn point at the base camp.
+
+/give @p written_book 1 0 {pages:["[\"\",{\"text\":\"To submit a quest insert the appropriate Quest Token into the turn-in chest and close it. Reopening the chest will present the listed reward.\"}]"],title:Quest Submission Board Rules,author:Unosami}
+
+blockdata ~-3 ~1 ~-2 {Items:[{Count:1,Slot:0,Damage:1,id:sponge}]} //replaces contents of chest with this
+
+/testforblock ~ ~1 ~ minecraft:chest 5 {Items:[{id:minecraft:written_book,Slot:0b,Count:1b,Damage:0s,tag:{title:"Conquer the Pantheon!"}}]}
+
+/give @p name_tag 1 0 {display: {Name: "Pantheon Quest Token"}}

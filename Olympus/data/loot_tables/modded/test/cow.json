@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 3,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "modded:testsword",
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:stick",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

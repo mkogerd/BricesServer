@@ -1,0 +1,2 @@
+{pools:[{rolls:1,entries:[{type:"item",weight:1,name:"minecraft:potion",
+functions:[{function:"minecraft:set_nbt",tag:"{display:{Name:\"Blood\"},CustomPotionEffects:[1:{id:23,Amplifier:1,Duration:5},2:{id:17,Amplifier:1,Duration:5}],HideFlags:32,Tags:[\"blood\"]}"}]}]}]}

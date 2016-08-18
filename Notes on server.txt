@@ -1,0 +1,100 @@
+World Olympus 1.10.2
+
+Incomplete projects: 
+Temple of Selene
+Quest Board
+Hephaestus Trial
+
+
+Plans:
+Post office
+
+
+Fun Items:
+Battle Sign:
+/give @p sign 1 0 {AttributeModifiers:[{AttributeName: "generic.attackDamage",Name: "generic.attackDamage",Amount: 1000,Operation: 2,UUIDMost: 53080,UUIDLeast: 675132}],HideFlags: 7,display:{Name:"Battle Sign"}}
+
+Anvil of Burden:
+give @p anvil 1 0 {AttributeModifiers:[{Operation:0,UUIDLeast:1,UUIDMost:1,Amount:-0.07,AttributeName:generic.movementSpeed,Name:encumbrance}],HideFlags:7,display:{Name:"Anvil of burden"}}
+
+Whoopin' Stick:
+/give @p stick 1 0 {AttributeModifiers: [{AttributeName: "generic.attackDamage",Name: "generic.attackDamage",Amount: 0, Operation: 0,UUIDMost: 66602,UUIDLeast: 674461}],display: {Name: "Whoopin' Stick"},ench:[{id: 19,lvl: 99}],HideFlags: 7}
+
+/give @p stick 1 0 {AttributeModifiers:[{Operation:0,UUIDLeast:1,UUIDMost:1,Amount:1,AttributeName:generic.attackDamage,Name:nomatter}],display: {Name: "Whoopin' Stick"},ench:[{id: 19,lvl: 99}],HideFlags: 7}
+
+/give @p name_tag 1 0 {display: {Name: "Favor of the Gods"}}
+
+{AttributeModifiers:[{Operation:0,UUIDLeast:1,UUIDMost:1,Amount:1,AttributeName:generic.attackDamage,Name:nomatter}]}
+
+Reaper's Scythe:
+/give @p iron_hoe 1 0 {display: {Name: "Reaper's Scythe",Lore: ["The weapon of choice","of Death Himself"]},AttributeModifiers: [{AttributeName: "generic.maxHealth",Name: "generic.maxHealth",Amount: 100,Operation: 0,UUIDMost: 35392,UUIDLeast: 865630},{AttributeName: "generic.movementSpeed",            Name: "generic.movementSpeed",Amount: 1,Operation: 0,UUIDMost: 94799,UUIDLeast: 277208},{AttributeName: "generic.attackDamage",Name: "generic.attackDamage",Amount: 100000,Operation: 0,UUIDMost: 55185,UUIDLeast: 885929}],Unbreakable: 1,HideFlags:7}
+
+ARMOR STANDS:
+/summon ArmorStand ~ ~1 ~ {NoGravity:1,ShowArms:1,NoBasePlate:1,Small:1,Invisible:1b,Marker:1b}
+/entitydata @e[type=ArmorStand,r=6] {Pose:{LeftLeg:[45f,0f,0f]}}
+
+Notable Locations:
+Inn:				/tp @p 165 70 -825 -90 0
+Starting Town:      /tp @p 179 63 -809	or	/tp @p @e[tag=spawn]
+Valok:				/tp @p -2877 73 -732 0 0
+Nihow:				/tp @p -7257 65 -842 -125 0
+Armory:				/tp @p 222 15 -911 0 0
+Sky island:         /tp @p -7 256 -851
+Parthenon:			/tp @p 203 64 -678 0 0
+Farm:				/tp @p 116 69 -1164 180 0
+Ryan's Abode:		/tp @p 176 71 -1315 0 0
+Brandon's Villa:	/tp @p 1026 73 -269 -90 0
+War Grounds:		/tp @p 1900 75 422
+
+Parthenon Locations:
+/tp @p -4924 78 4915 90 0
+
+Master tp Book:
+/give @p written_book 1 0 {pages:["[\"\",{\"text\":\"Map\n\",\"color\":\"red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] @e[tag=map]\"}},{\"text\":\"Spawn\n\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 179 63 -809\"}},{\"text\":\"Valok\n\",\"color\":\"dark_blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] -2877 73 -732 0 0\"}},{\"text\":\"Nihow\n\",\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] -7257 65 -842 -125 0\"}},{\"text\":\"Armory\n\",\"color\":\"dark_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 222 15 -911 0 0\"}},{\"text\":\"Parthenon\n\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 203 64 -678 0 0\"}},{\"text\":\"Sky Island\n\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] -7 256 -851\"}},{\"text\":\"Farm\n\",\"color\":\"light_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 116 69 -1164 180 0\"}},{\"text\":\"Warp Books Room\n\",\"color\":\"black\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 192 6 -791\"}},{\"text\":\"Data Center\n\",\"color\":\"aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 186 57 -786\"}}]","[\"\",{\"text\":\"Ryan's Abode\n\",\"color\":\"gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 176 71 -1315 0 0\"}},{\"text\":\"Brandon's Villa\n\",\"color\":\"dark_red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] 1026 73 -269 -90 0\"}}]","[\"\",{\"text\":\"Aurora\n\",\"color\":\"red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] daddyslittlegirl\"}},{\"text\":\"Brandon\n\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] bmcrabtree\"}},{\"text\":\"Koger\n\",\"color\":\"dark_blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] The_Koger\"}},{\"text\":\"Holstein\n\",\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] KillingRange\"}},{\"text\":\"Sam\n\",\"color\":\"dark_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] unicycler009\"}},{\"text\":\"Shea\n\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] Odysseus\"}},{\"text\":\"Kirby\n\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] kmitcham\"}},{\"text\":\"James\n\",\"color\":\"light_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] smallmandan\"}},{\"text\":\"TBD\n\",\"color\":\"black\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] ~ ~ ~\"}},{\"text\":\"TBD\n\",\"color\":\"aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @a[r=3] ~ ~ ~\"}}]"],title:Master Transport,author:Admin}
+
+Teleportation Books:
+
+/give @p written_book 1 0 {pages:["[\"\",{\"text\":\"Gu ftathk su ghha'a ghhantha xa thana, nu'saft. Fu' aftft nu'saftt u'ugunasa r'un shut lftatha. Gu un laatha\",\"color\":\"dark_green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger warpspawn set 1\"}}]"],title:Hasted Journey: Spawn,author:Hermes}
+
+Good Code Snippets:
+/scoreboard players tag @a add holdingStone {SelectedItem:{id:"minecraft:stone"}}
+/say @a[tag=holdingStone]
+/scoreboard players tag @a[tag=holdingStone] remove holdingStone
+
+Summon item that cannot be picked up:
+summon Item ~ ~1 ~ {Item:{id:diamond_sword,Count:0,tag:{display:{Name:"test",Lore:["willy","wonka"]},ench:[{id:0,lvl:0},{id:0,lvl:0}],hideFlags:7}}}
+
+§kIdon'tknowhowtospell
+
+/replaceitem entity @p slot.armor.chest minecraft:elytra 1 0
+
+/playsound block.anvil.land master @p
+
+/give @a[x=100,y=50,z=100,r=1] minecraft:diamond 64
+
+/scoreboard players tag @e add foobar {Tags:[foo,bar]}
+
+/summon FallingSand ~ ~3 ~ {NoGravity:1b,Block:air,Data:0,Time:1,DropItem:0,Tags:["Floating"]}
+entitydata @e[type=FallingSand,tag=Floating] {Time:1)
+
+/give @p written_book 1 0 {pages:["[\"\",{\"text\":\"Map\n\",\"color\":\"red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p @e[tag=map]\"}},{\"text\":\"Spawn\n\",\"color\":\"green\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 179 63 -809\"}},{\"text\":\"Aurora's Village\n\",\"color\":\"dark_blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p -2877 73 -732 0 0\"}},{\"text\":\"Armory\n\",\"color\":\"dark_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 222 15 -911 0 0\"}},{\"text\":\"Parthenon\n\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 203 64 -678 0 0\"}},{\"text\":\"Sky Island\n\",\"color\":\"blue\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p -7 256 -851\"}},{\"text\":\"Farm\n\",\"color\":\"light_purple\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 116 69 -1164 180 0\"}},{\"text\":\"Warp Books Room\n\",\"color\":\"black\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 192 6 -791\"}},{\"text\":\"Data Center\n\",\"color\":\"aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 186 57 -786\"}}]","[\"\",{\"text\":\"Ryan's Abode\n\",\"color\":\"gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 176 71 -1315 0 0\"}},{\"text\":\"Brandon's Villa\n\",\"color\":\"dark_red\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tp @p 1026 73 -269 -90 0\"}}]"],title:Master Transport,author:Admin}
+
+/give @p bow 1 0 {Tags:["BattleGear"],AttributeModifiers: [{AttributeName: "generic.attackDamage",Name: "generic.attackDamage",Amount: 20, Operation: 0,UUIDMost: 66602,UUIDLeast: 674461}],ench: [{id: 48,lvl: 10},{id:51,lvl:10}],HideFlags: 7,Unbreakable: 1}
+
+/summon Fireball ~ ~3 ~ {ExplosionPower:0,direction:[0.0,0.0,0.0]}
+
+/summon Wolf ~ ~ ~ {UUIDLeast:0L,UUIDMost:0L}
+/execute @e[type=Creeper] ~ ~ ~ /summon Snowball ~ ~2.8 ~ {ownerName:"0-0-0-0-0"}
+
+/execute @e[name=Door] ~ ~ ~ /tp @p[r=0] @r[type=ArmorStand,name=Exit]	//one-room maze
+
+/execute @r[type=ArmorStand,name=Random] ~ ~ ~ /summon FallingSand ~ ~ ~ {Tile:sand,Block:sand,Time:1,DropItem:0}	//randomizer
+
+{CustomName:"Custom Crafting Table",x:1085,y:84,z:-266,Items:[],id:"Dropper",Lock:""}
+{CustomName:"Custom Crafting Table",x:1085,y:84,z:-264,Items:[],id:"Dropper",Lock:""}
+
+execute @a[score_beamReady_min=2] ~ ~ ~ /summon ArmorStand ~ ~ ~ {Tags:["Laser"],Passengers:[{id:Guardian,ActiveEffects:[{Id:14,Amplifier:1,Duration:19999980,ShowParticles:0b}]}],Invisible:1b}
+
+/give @p elytra 1 0 {Tags:["BattleGear"],HideFlags: 7,Unbreakable: 1}
+/give @p bow 1 0 {Tags:["BattleGear"],ench: [{id: 48,lvl: 10},{id:51,lvl:10},{id:19,lvl:5}],HideFlags: 7,Unbreakable: 1}
+/give @p arrow 1 0 {Tags:["BattleGear"],AttributeModifiers: [{AttributeName: "generic.attackDamage",Name: "generic.attackDamage",Amount: 20, Operation: 0,UUIDMost: 66602,UUIDLeast: 674461}]}

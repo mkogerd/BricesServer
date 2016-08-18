@@ -1,0 +1,12 @@
+[21:49:14] [Server thread/INFO]: Stopping the server
+[21:49:14] [Server thread/INFO]: Stopping server
+[21:49:14] [Server thread/INFO]: Saving players
+[21:49:14] [Server thread/INFO]: Saving worlds
+[21:49:14] [Server thread/INFO]: Saving chunks for level 'Olympus'/Overworld
+[21:49:14] [Server thread/INFO]: Saving chunks for level 'Olympus'/Nether
+[21:49:14] [Server thread/INFO]: Saving chunks for level 'Olympus'/The End
+[21:49:15] [Server Shutdown Thread/INFO]: Stopping server
+[21:49:15] [Server Shutdown Thread/INFO]: Saving players
+[21:49:15] [Server Shutdown Thread/INFO]: Saving worlds
+[21:49:15] [Server Shutdown Thread/INFO]: Saving chunks for level 'Olympus'/Overworld
+[21:49:15] [Server Shutdown Thread/INFO]: Saving chunks for level 'Olympus'/Nether

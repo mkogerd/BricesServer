@@ -1,0 +1,60 @@
+-59 142 -499
+-60 150 -504
+-64 72 -471
+https://www.facebook.com/kittenfarmer/videos/10205132103901831/
+
+Rajecent
+
+/blockdata ~ ~1 ~ {Text2: "{\"text\":\"Select a Tower\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/give @p written_book 1 0 {pages:["[\\"\\",{\\"text\\":\\"words\\"}]"],title:Quest Details,author:Derp}}\"}"}
+
+/blockdata ~ ~5 ~ {Text2: "{\"text\":\"Select a\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/scoreboard players set @p  NWi1 1\"}}",Text3:"{\"text\":\"Tower!\"}"}
+
+/blockdata ~ ~ ~-1 {Text2: "{\"text\":\"Select a\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/tellraw @p {\"text\":\"Hi there\",\"Bold\":\"true\"}\"}}",Text3:"{\"text\":\"Tower!\"}"}
+
+/setblock ~ ~1 ~ minecraft:standing_sign 0 replace {Text1:"[\"Top text\"]",Text2:"[\"\"]",Text3:"[\"\"]",Text4:"[\"Bottom text\"]"}
+
+see about changing command blocks with a certain name in a certain radius 
+
+It concerns the queuing and activation order of command blocks. Quick summary of each tick:
+Activate previously-queued Repeating/Impulse blocks.
+Schedule Repeating & Chain blocks for next tick.
+Activate previously-queued Chain blocks.
+Your Repeating block activated and was queued again for the next tick before the Chain block set auto to 0, and setting auto to 0 does not remove the Repeating block from the queue (and there is currently nothing that can remove a tile entity from the queue; even deleting the block itself won't do so and the scheduled update will simply fail when it happens). So it will activate on the next tick, but won't re-queue itself because auto is off.
+One solution is to not use a Repeating block, but instead use Impulse blocks as a clock by setting auto to 1 (and back to 0, as setting auto to 1 only queues the command block if it was 0 first). They do not re-queue themselves like Repeating blocks do, so you can re-queue them in the chain when necessary.
+
+/summon FallingSand ~ ~ ~ {NoGravity:1b,Block:stone,Data:0,Time:1,DropItem:0,Tags:["Floating"]}
+entitydata @e[type=FallingSand,tag=Floating] {Time:1)
+
+/scoreboard players tag @e add foobar {Tags:[foo,bar]}
+
+json generator import:
+{"command":"/give @p written_book 1 0 {pages:%s,title:Book,author:TellrawGenerator}","jobject":[{"text":"Map\\n","color":"red","clickEvent":{"action":"run_command","value":"/tp @p @e[tag=map]"}},{"text":"Spawn\\n","color":"green","clickEvent":{"action":"run_command","value":"/tp @p 179 63 -809"}},{"text":"Aurora's Village\\n","color":"dark_blue","clickEvent":{"action":"run_command","value":"/tp @p -2877 73 -732 0 0"}},{"text":"Armory\\n","color":"dark_purple","clickEvent":{"action":"run_command","value":"/tp @p 222 15 -911 0 0"}},{"text":"Parthenon\\n","color":"gold","clickEvent":{"action":"run_command","value":"/tp @p 203 64 -678 0 0"}},{"text":"Sky Island\\n","color":"blue","clickEvent":{"action":"run_command","value":"/tp @p -7 256 -851"}},{"text":"Farm\\n","color":"light_purple","clickEvent":{"action":"run_command","value":"/tp @p 116 69 -1164 180 0"}},{"text":"Warp Books Room\\n","color":"black","clickEvent":{"action":"run_command","value":"/tp @p 192 6 -791"}},{"text":"Data Center\\n","color":"aqua","clickEvent":{"action":"run_command","value":"/tp @p 186 57 -786"}},{"NEW_ITERATE_FLAG":true},{"text":"Ryan's Abode\\n","color":"gray","clickEvent":{"action":"run_command","value":"/tp @p 176 71 -1315 0 0"}},{"text":"Brandon's Villa\\n","color":"dark_red","clickEvent":{"action":"run_command","value":"/tp @p 1026 73 -269 -90 0"}}],"jtemplate":"book"}
+
+1147 98 -781
+1145 98 -782
+
+LootTable:"modded:example3"
+1147 103 -788
+
+/setblock ~0 ~1 ~0 mob_spawner 0 replace {SpawnData:{CustomName:"Vampire",Tags:["vampire"],ArmorItems:[{id:leather_boots,tag:{display:{color:0}}},{id:leather_leggings,tag:{display:{color:0}}},{id:leather_chestplate,tag:{display:{color:0}}},{Count:1,Damage:3,id:skull,tag:{display:{Name:"Vampire"},SkullOwner:{Id:"a8701efe-e48e-4ebf-a844-bc9c79b3d051",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ0NDc1NmUwYjRlY2U4ZDc0NjI5NmEzZDVlMjk3ZTE0MTVmNGJhMTc2NDdmZmUyMjgzODUzODNkMTYxYTkifX19"}]}}}}],Attributes:[{Name:generic.movementSpeed,Base:1.0},{Name:generic.attackDamage,Base:5}],Health:20.0f,id:Skeleton,DeathLootTable:"modded:mooncharmtest"},SpawnCmount:1,SpawnRange:2,maxNearbyEntities:2,Delay:20,MinSpawnDelay:10,MaxSpawnDelay:150} 
+
+Summon Item ~ ~1 ~ {Item:{id:276,Count:0,tag:{display:{Name:"test",Lore:["willy","wonka"]},ench:[{id:0,lvl:0},{id:0,lvl:0}],hideFlags:7}}}
+
+ActiveEffects:[{Id:14,Amplifier:1,Duration:19999980,ShowParticles:0b}]
+
+
+/give @p skull 10 3 {Tags:["trap"],display:{Name:"ghost trap"},SkullOwner:{Id:"123b6787-fb86-488c-8bf3-cc1c139c1241",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjNkNmY3ODI1YjgzMjdhYTc3ZDdlYzdlMGE1N2FiNDJiM2NlYmNjZjAxNDZmZmQ4ZmMzZjVlM2JhZGExMzUifX19"}]}}}
+
+/summon Item 36 229 69 {Item:{id:skull,Count:1,Damage:3,tag:{display:{Name:"full ghost trap"}}}}
+
+/summon Item ~ ~1 ~ {Item:{id:skull,Count:1,Damage:3,tag:{display:{Name:"full ghost trap",SkullOwner:{Id:"123b6787-fb86-488c-8bf3-cc1c139c1241",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjNkNmY3ODI1YjgzMjdhYTc3ZDdlYzdlMGE1N2FiNDJiM2NlYmNjZjAxNDZmZmQ4ZmMzZjVlM2JhZGExMzUifX19"}]}}}}}}
+
+scoreboard players set @p hunterTest 0
+scoreboard players tag @p remove hunterTestee
+/clear @p arrow -1 -1 {Tags:["hunterGear"]}
+/clear @p bow -1 -1 {Tags:["hunterGear"]}
+
+
+/summon Chicken ~ ~1 ~ {Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken,Passengers:[{id:Chicken}]}]}]}]}]}]}]}]}]}
+
+/replaceitem entity @e[tag=intruderbait] slot.armor.head minecraft:stick 1 0 {HideFlags:31,AttributeModifiers:[{AttributeName:"generic.maxHealth",Name:"generic.maxHealth",Amount:20,Operation:0,UUIDLeast:30412,UUIDMost:942627},{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:1,Operation:0,UUIDLeast:309796,UUIDMost:293363},{AttributeName:"generic.movementSpeed",Name:"generic.movementSpeed",Amount:3.5,Operation:2,UUIDLeast:316302,UUIDMost:277509},{AttributeName:"generic.attackDamage",Name:"generic.attackDamage",Amount:98765432100123456789,Operation:2,UUIDLeast:334396,UUIDMost:887962,Slot:"mainhand"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:30,Operation:0,UUIDLeast:935499,UUIDMost:238296},{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:98765432100123456789,Operation:2,UUIDLeast:460012,UUIDMost:866943,Slot:"mainhand"}],Unbreakable:1,display:{Name:"Better then your old helmet!",Lore:[try hitting people with it to]},ench:[{id:0,lvl:127},{id:1,lvl:127},{id:2,lvl:127},{id:3,lvl:127},{id:4,lvl:127},{id:5,lvl:127},{id:6,lvl:127},{id:7,lvl:127},{id:8,lvl:127},{id:16,lvl:127},{id:17,lvl:127},{id:18,lvl:127},{id:19,lvl:127},{id:20,lvl:127},{id:21,lvl:127},{id:32,lvl:127},{id:33,lvl:127},{id:34,lvl:127},{id:35,lvl:127},{id:48,lvl:127},{id:49,lvl:127},{id:50,lvl:127},{id:51,lvl:127},{id:61,lvl:127},{id:62,lvl:127}]}
